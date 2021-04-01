@@ -5,8 +5,8 @@ Subject: [PATCH] views: add examples from ACL4SSR and Subconverter
 
 Signed-off-by: CN_SZTL <cnsztl@project-openwrt.eu.org>
 ---
- src/views/Subconverter.vue | 104 +++++++++++++++++++++++++++++++++++++
- 1 file changed, 104 insertions(+)
+ src/views/Subconverter.vue | 105 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 105 insertions(+)
 
 --- a/src/views/Subconverter.vue
 +++ b/src/views/Subconverter.vue
