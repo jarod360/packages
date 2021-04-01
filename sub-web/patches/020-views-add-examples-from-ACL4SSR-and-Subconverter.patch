@@ -10,6 +10,7 @@ Signed-off-by: CN_SZTL <cnsztl@project-openwrt.eu.org>
 
 --- a/src/views/Subconverter.vue
 +++ b/src/views/Subconverter.vue
+@@ -227,1 +227,1 @@ const defaultBackend = 'http://home.zesun.org:22550' + '/sub?'
 @@ -257,6 +257,110 @@ export default {
          },
          backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
