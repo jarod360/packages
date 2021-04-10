@@ -5,7 +5,7 @@ Subject: [PATCH] Update emoji.txt
 
 add `JP` for Japan and 'KR' for Korea node.
 ---
- base/snippets/emoji.txt | 4 ++--
+ base/snippets/emoji.txt | 2 +-
  1 file changed, 1 insertions(+), 1 deletions(-)
 
 diff --git a/base/snippets/emoji.txt b/base/snippets/emoji.txt
