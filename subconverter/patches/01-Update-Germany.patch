@@ -9,7 +9,6 @@ add `DE` for Germany node.
  1 file changed, 1 insertions(+), 1 deletions(-)
 
 diff --git a/base/snippets/emoji.txt b/base/snippets/emoji.txt
-index 0b4c66be..3ed627b9 100644
 --- a/base/snippets/emoji.txt
 +++ b/base/snippets/emoji.txt
 @@ -8,3 +8,3 @@
