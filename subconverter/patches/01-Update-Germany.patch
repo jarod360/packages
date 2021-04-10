@@ -3,7 +3,7 @@ From: =?UTF-8?q?=E7=A7=A6=E5=AE=87=E8=88=AA?= <qinyuhangxiaoxiang@gmail.com>
 Date: Fri, 9 Apr 2021 11:52:31 +0800
 Subject: [PATCH] Update emoji.txt
 
-add `JP` for Japan and 'KR' for Korea node.
+add `DE` for Germany node.
 ---
  base/snippets/emoji.txt | 2 +-
  1 file changed, 1 insertions(+), 1 deletions(-)
