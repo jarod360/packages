@@ -8,6 +8,7 @@ PKG_NAME:=subconverter
 PKG_BASE_VERSION:=0.6.4
 PKG_RELEASE:=$(AUTORELEASE)
 
+PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/tindy2013/subconverter.git
 PKG_SOURCE_DATE:=2021-03-27
 PKG_SOURCE_VERSION:=d6cb49fab3314f839ee9fc29dcf7541d9bc9fdc6
