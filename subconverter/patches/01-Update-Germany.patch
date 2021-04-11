@@ -1,8 +1,9 @@
 diff --git a/base/snippets/emoji.txt b/base/snippets/emoji.txt
 --- a/base/snippets/emoji.txt
 +++ b/base/snippets/emoji.txt
-@@ -10,1 +10,1 @@ (Canada|Montreal|Vancouver|加拿大|蒙特利尔|温哥华|楓葉|枫叶),🇨🇦
-(Switzerland|Zurich|瑞士|苏黎世),🇨🇭
+@@ -10,1 +10,1 @@
+ (Canada|Montreal|Vancouver|加拿大|蒙特利尔|温哥华|楓葉|枫叶),🇨🇦
+ (Switzerland|Zurich|瑞士|苏黎世),🇨🇭
 -(Germany|法兰克福|德),🇩🇪
 +(?i:DE|Germany|法兰克福|德),🇩🇪
 @@ -17,9 +17,9 @@
