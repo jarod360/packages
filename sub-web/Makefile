@@ -21,6 +21,7 @@ PKG_LICENSE:=MIT
 PKG_LICENSE_FILES:=LICENSE
 PKG_MAINTAINER:=CN_SZTL <cnsztl@immortalwrt.org>
 
+PKG_BUILD_DEPENDS:=node/host node-yarn/host
 
 include $(INCLUDE_DIR)/package.mk
 
