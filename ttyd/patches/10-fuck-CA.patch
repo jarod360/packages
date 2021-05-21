@@ -1,9 +1,5 @@
----
- src/server.c | 4 ----
- 1 file changed, 4 deletions(-)
 
 diff --git a/src/server.c b/src/server.c
-index d842f392..c3e85309 100644
 --- a/src/server.c
 +++ b/src/server.c
 @@ -511,10 +511,6 @@ int main(int argc, char **argv) {
