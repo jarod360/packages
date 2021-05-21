@@ -1,10 +1,4 @@
 
----
- src/server.c | 14 ++------------
- 1 file changed, 2 insertions(+), 12 deletions(-)
-
-diff --git a/src/server.c b/src/server.c
-index d842f392..35a57859 100644
 --- a/src/server.c
 +++ b/src/server.c
 @@ -71,7 +71,6 @@ static const struct option options[] = {
