@@ -1,6 +1,4 @@
-
 diff --git a/src/server.c b/src/server.c
-index d842f392..6b2a2a0b 100644
 --- a/src/server.c
 +++ b/src/server.c
 @@ -10,7 +10,7 @@
