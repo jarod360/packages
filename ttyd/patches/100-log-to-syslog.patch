@@ -1,14 +1,22 @@
+
+---
+ src/server.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/server.c b/src/server.c
+index 35a57859..3f12ff6e 100644
 --- a/src/server.c
 +++ b/src/server.c
-@@ -10,6 +10,7 @@
+@@ -10,7 +10,7 @@
  #include <stdlib.h>
  #include <string.h>
  #include <sys/stat.h>
+-
 +#include <syslog.h>
- 
  #include "utils.h"
  
-@@ -478,7 +479,8 @@ int main(int argc, char **argv) {
+ #ifndef TTYD_VERSION
+@@ -473,7 +473,8 @@ int main(int argc, char **argv) {
      return -1;
    }
  
