@@ -58,9 +58,7 @@
  
  #if LWS_LIBRARY_VERSION_MAJOR >= 2
    char server_hdr[128] = "";
-@@ -508,18 +504,12 @@ int main(int argc, char **argv) {
-   }
- 
+@@ -506,16 +506,10 @@
  #if defined(LWS_OPENSSL_SUPPORT) || defined(LWS_WITH_TLS)
 -  if (ssl) {
      info.ssl_cert_filepath = cert_path;
