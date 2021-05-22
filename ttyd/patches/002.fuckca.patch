@@ -1,15 +1,12 @@
----
- src/server.c | 8 --------
- 1 file changed, 8 deletions(-)
-
 diff --git a/src/server.c b/src/server.c
-index d842f392..92c0ce1b 100644
+index d842f392..e1180318 100644
 --- a/src/server.c
 +++ b/src/server.c
-@@ -508,17 +508,9 @@ int main(int argc, char **argv) {
+@@ -507,19 +507,9 @@ int main(int argc, char **argv) {
+     }
    }
  
- #if defined(LWS_OPENSSL_SUPPORT) || defined(LWS_WITH_TLS)
+-#if defined(LWS_OPENSSL_SUPPORT) || defined(LWS_WITH_TLS)
 -  if (ssl) {
 -    info.ssl_cert_filepath = cert_path;
 -    info.ssl_private_key_filepath = key_path;
@@ -21,6 +18,7 @@ index d842f392..92c0ce1b 100644
      info.options |= LWS_SERVER_OPTION_REDIRECT_HTTP_TO_HTTPS;
  #endif
 -  }
- #endif
+-#endif
  
    lwsl_notice("ttyd %s (libwebsockets %s)\n", TTYD_VERSION,
+               LWS_LIBRARY_VERSION);
