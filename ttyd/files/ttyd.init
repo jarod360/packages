@@ -32,7 +32,7 @@ generate_keys() {
 
 	RET=-1
 
-	SUBJ="${SUBJ}/C=${country:-RU}"
+	SUBJ="${SUBJ}/C=${country:-CN}"
 	SUBJ="${SUBJ}/O=${organization:-openwrt}"
 	SUBJ="${SUBJ}/CN=${commonname:-openwrt}"
 
@@ -88,7 +88,7 @@ start_service()
 	config_get ttyd_credential   "$cfg" "credential" 0
 	config_get ttyd_ssl_key      "$cfg" "ssl_key" "/etc/ttyd/ttyd.key"
 	config_get ttyd_ssl_cert     "$cfg" "ssl_cert" "/etc/ttyd/ttyd.crt"
-	config_get ttyd_debug        "$cfg" "debug" "1 2"
+	config_get ttyd_debug        "$cfg" "debug" "1 2 4 8"
 	config_get ttyd_username     "$cfg" "username"
 	config_get ttyd_password     "$cfg" "password"
 
