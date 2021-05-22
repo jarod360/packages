@@ -1,17 +1,17 @@
 ---
- src/server.c | 1 -
- 1 file changed, 1 deletion(-)
+ src/server.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/server.c b/src/server.c
-index d842f392..b6221e9b 100644
+index d842f392..9a62659a 100644
 --- a/src/server.c
 +++ b/src/server.c
-@@ -513,7 +513,7 @@
+@@ -513,7 +513,7 @@ int main(int argc, char **argv) {
      info.ssl_private_key_filepath = key_path;
      if (strlen(ca_path) > 0) {
        info.ssl_ca_filepath = ca_path;
 -      info.options |= LWS_SERVER_OPTION_REQUIRE_VALID_OPENSSL_CLIENT_CERT;
-+
++      info.options |= LWS_SERVER_OPTION_PEER_CERT_NOT_REQUIRED;
      }
  #if LWS_LIBRARY_VERSION_MAJOR >= 2
      info.options |= LWS_SERVER_OPTION_REDIRECT_HTTP_TO_HTTPS;
