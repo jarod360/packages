@@ -1,4 +1,4 @@
-@@ -511,14 +511,10 @@ int main(int argc, char **argv) {
+@@ -511,14 +511,10 @@
    if (ssl) {
      info.ssl_cert_filepath = cert_path;
      info.ssl_private_key_filepath = key_path;
