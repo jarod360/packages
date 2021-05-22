@@ -1,3 +1,5 @@
+--- a/src/server.c
++++ b/src/server.c
 @@ -511,14 +511,10 @@
    if (ssl) {
      info.ssl_cert_filepath = cert_path;
