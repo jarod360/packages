@@ -1,17 +1,25 @@
---- sub-web-1.0.0.orig/.env
-+++ sub-web-1.0.0/.env
-@@ -7,7 +7,7 @@ VUE_APP_BACKEND_RELEASE = "https://githu
+--- a/.env
++++ b/.env
+@@ -7,7 +7,7 @@ VUE_APP_BACKEND_RELEASE = "https://github.com/tindy2013/subconverter/releases"
  VUE_APP_SUBCONVERTER_REMOTE_CONFIG = "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/example_external_config.ini"
  
  # API 后端
 -VUE_APP_SUBCONVERTER_DEFAULT_BACKEND = "https://api.wcc.best"
-+VUE_APP_SUBCONVERTER_DEFAULT_BACKEND = "http://home.zesrun.og:25500"
++VUE_APP_SUBCONVERTER_DEFAULT_BACKEND = "http://home.zesun.org:25500"
  
  # 短链接后端
  VUE_APP_MYURLS_DEFAULT_BACKEND = "https://suo.yt"
-Index: sub-web-1.0.0/src/views/Subconverter.vue
 --- a/src/views/Subconverter.vue
 +++ b/src/views/Subconverter.vue
+@@ -36,7 +36,7 @@
+                     style="width: 100%"
+                     v-model="form.customBackend"
+                     :fetch-suggestions="backendSearch"
+-                    placeholder="动动小手，（建议）自行搭建后端服务。例：http://127.0.0.1:25500/sub?"
++                    placeholder="动动小手，（建议）自行搭建后端服务。例：https://api.wcc.best/sub?"
+                   >
+                     <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
+                   </el-autocomplete>
 @@ -257,6 +257,110 @@ export default {
          },
          backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
