@@ -1,18 +1,17 @@
-From 0092ddca7faa480e07184c157e992badd4eef633 Mon Sep 17 00:00:00 2001
-From: CN_SZTL <cnsztl@project-openwrt.eu.org>
-Date: Mon, 11 Jan 2021 11:57:19 +0000
-Subject: [PATCH] views: add examples from ACL4SSR and Subconverter
-
-Signed-off-by: CN_SZTL <cnsztl@project-openwrt.eu.org>
----
- src/views/Subconverter.vue | 105 +++++++++++++++++++++++++++++++++++++
- 1 file changed, 105 insertions(+)
-
+--- sub-web-1.0.0.orig/.env
++++ sub-web-1.0.0/.env
+@@ -7,7 +7,7 @@ VUE_APP_BACKEND_RELEASE = "https://githu
+ VUE_APP_SUBCONVERTER_REMOTE_CONFIG = "https://raw.githubusercontent.com/tindy2013/subconverter/master/base/config/example_external_config.ini"
+ 
+ # API 后端
+-VUE_APP_SUBCONVERTER_DEFAULT_BACKEND = "https://api.wcc.best"
++VUE_APP_SUBCONVERTER_DEFAULT_BACKEND = "http://home.zesrun.og:25500"
+ 
+ # 短链接后端
+ VUE_APP_MYURLS_DEFAULT_BACKEND = "https://suo.yt"
+Index: sub-web-1.0.0/src/views/Subconverter.vue
 --- a/src/views/Subconverter.vue
 +++ b/src/views/Subconverter.vue
-@@ -227,1 +227,1 @@ const gayhubRelease = process.env.VUE_APP_BACKEND_RELEASE
--const defaultBackend = process.env.VUE_APP_SUBCONVERTER_DEFAULT_BACKEND + '/sub?'
-+const defaultBackend = 'http://' + 'home.zesun.org' + ':25500' + '/sub?'
 @@ -257,6 +257,110 @@ export default {
          },
          backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
