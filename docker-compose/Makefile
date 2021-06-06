@@ -11,9 +11,9 @@ PKG_MAINTAINER:=Javier Marcet <javier@marcet.info>
 PKG_LICENSE:=Apache-2.0
 PKG_LICENSE_FILES:=LICENSE
 
-include ../../feeds/packages/lang/python/pypi.mk
+include ../../lang/python/pypi.mk
 include $(INCLUDE_DIR)/package.mk
-include ../../feeds/packages/lang/python/python3-package.mk
+include ../../lang/python/python3-package.mk
 
 PYTHON3_PKG_SETUP_ARGS:=
 
