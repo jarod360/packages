@@ -4,8 +4,6 @@
 
 include $(TOPDIR)/rules.mk
 
-include $(TOPDIR)/rules.mk
-
 PKG_NAME:=subconverter
 PKG_BASE_VERSION:=0.7.0
 PKG_RELEASE:=1
