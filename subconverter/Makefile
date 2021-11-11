@@ -4,15 +4,17 @@
 
 include $(TOPDIR)/rules.mk
 
+include $(TOPDIR)/rules.mk
+
 PKG_NAME:=subconverter
-PKG_BASE_VERSION:=0.7.1
-PKG_RELEASE:=37
+PKG_BASE_VERSION:=0.7.0
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/tindy2013/subconverter.git
-PKG_SOURCE_DATE:=2021-10-01
-PKG_SOURCE_VERSION:=b0c2d72ed72277221a80e435b2db4b13d2220736
-PKG_MIRROR_HASH:=skip
+PKG_SOURCE_DATE:=2021-09-20
+PKG_SOURCE_VERSION:=fc641444aad07ebb620ac7c0c9501ffeddfa60d3
+PKG_MIRROR_HASH:=9b12004a3cd78c6803075a2f99431f7766a157993447eec5032d0d0d3d705979
 
 PKG_VERSION:=$(PKG_BASE_VERSION)-$(PKG_SOURCE_DATE)-$(call version_abbrev,$(PKG_SOURCE_VERSION))
 
@@ -20,7 +22,7 @@ PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILES:=LICENSE
 PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
 
-PKG_BUILD_DEPENDS:=jpcre2 libcron quickjspp rapidjson
+PKG_BUILD_DEPENDS:=jpcre2 libcron quickjspp rapidjson toml11
 PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
