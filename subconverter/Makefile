@@ -5,7 +5,6 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=subconverter
-PKG_BASE_VERSION:=0.7.1
 PKG_RELEASE:=$(AUTORELEASE)
 
 PKG_SOURCE_PROTO:=git
@@ -28,26 +27,26 @@ include $(INCLUDE_DIR)/cmake.mk
 define Package/subconverter
   SECTION:=utils
   CATEGORY:=Utilities
-  TITLE:=Utility to convert between various subscription format
+  TITLE:=Utility to convert between various proxy subscription format
   URL:=https://github.com/tindy2013/subconverter
-  DEPENDS:=+libpthread +libstdcpp +libevent2 +libyaml-cpp +libpcre2 +libcurl +zlib
-endef
-
-define Package/subconverter/description
-  Utility to convert between various proxy subscription formats.
+  DEPENDS:=+libatomic +libcurl +libevent2 +libpcre2 +libpthread \
+	+libstdcpp +libyaml-cpp +zlib
 endef
 
 TARGET_CXXFLAGS := $(FPIC) $(filter-out -O%,$(TARGET_CXXFLAGS)) -O3
 TARGET_CXXFLAGS += -Wall -Wextra -ffunction-sections -fdata-sections -flto
 TARGET_LDFLAGS += -Wl,--gc-sections -flto
 
-CMAKE_OPTIONS += -DCMAKE_BUILD_TYPE=Release
+CMAKE_OPTIONS += \
+	 -DCMAKE_BUILD_TYPE=Release \
+	 -DCMAKE_EXE_LINKER_FLAGS="-latomic"
 
 define Package/subconverter/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/subconverter $(1)/usr/bin/subconverter
 	$(INSTALL_DIR) $(1)/etc/subconverter
 	$(CP) $(PKG_BUILD_DIR)/base/* $(1)/etc/subconverter/
+
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/subconverter.init $(1)/etc/init.d/subconverter
 endef
