@@ -5,12 +5,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=quickjspp
-PKG_RELEASE:=27
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/tindy2013/quickjspp.git
-PKG_SOURCE_DATE:=2021-03-23
-PKG_SOURCE_VERSION:=d4227e2ed98c8e7124eb0f653e7a008c44f54a8a
+PKG_SOURCE_URL:=https://github.com/ftk/quickjspp.git
+PKG_SOURCE_DATE:=2022-02-05
+PKG_SOURCE_VERSION:=8efd98903fca507e58144865d26c47c91565bb55
 PKG_MIRROR_HASH:=skip
 
 PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
@@ -21,28 +21,33 @@ CMAKE_INSTALL:=1
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
-define Package/quickjspp
+define Package/libquickjs
   SECTION:=lib
   CATEGORY:=Libraries
-  URL:=https://github.com/ftk/quickjspp
-  TITLE:=QuickJS wrapper for C++
-  DEPENDS:=+libatomic +libpthread
-  PROVIDES:=quickjs
+  URL:=https://bellard.org/quickjs/
+  TITLE:=A small and embeddable Javascript engine
+  # mips(el) & glibc require it
+  DEPENDS:=+libatomic
 endef
 
-define Package/quickjspp/description
-  QuickJSPP is QuickJS wrapper for C++. It allows you to easily embed
-  Javascript engine into your program.
+define Package/libquickjs/description
+  QuickJS is a small and embeddable Javascript engine. It supports the
+  ES2020 specification including modules, asynchronous generators,
+  proxies and BigInt.
+
+  It optionally supports mathematical extensions such as big decimal
+  floating point numbers (BigDecimal), big binary floating point
+  numbers (BigFloat) and operator overloading.
 endef
 
-CMAKE_OPTIONS += -DCMAKE_EXE_LINKER_FLAGS="-latomic"
+CMAKE_OPTIONS+= \
+	-DBUILD_SHARED_LIBS=ON \
+	-DBUILD_TESTING=OFF \
+	-DCMAKE_EXE_LINKER_FLAGS="-latomic"
 
-define Build/Install
-	$(INSTALL_DIR) $(PKG_INSTALL_DIR)/usr/lib/
-	$(CP) $(PKG_BUILD_DIR)/quickjs/libquickjs.a $(PKG_INSTALL_DIR)/usr/lib/
-	$(INSTALL_DIR) $(PKG_INSTALL_DIR)/usr/include/quickjs/
-	$(CP) $(PKG_BUILD_DIR)/quickjspp.hpp $(PKG_INSTALL_DIR)/usr/include/
-	$(CP) $(PKG_BUILD_DIR)/quickjs/quickjs*.h $(PKG_INSTALL_DIR)/usr/include/quickjs/
+define Package/libquickjs/install
+	$(INSTALL_DIR) $(1)/usr/lib/
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libquickjs.so $(1)/usr/lib/
 endef
 
-$(eval $(call BuildPackage,quickjspp))
+$(eval $(call BuildPackage,libquickjs))
