@@ -31,7 +31,7 @@ define Package/subconverter
   TITLE:=Utility to convert between various proxy subscription format
   URL:=https://github.com/tindy2013/subconverter
   DEPENDS:=+libatomic +libcron +libcurl +libevent2 +libpcre2 \
-    +libquickjs +libstdcpp +libyaml-cpp
+    +quickjspp +libstdcpp +libyaml-cpp
 endef
 
 # mips(el) & glibc require it
