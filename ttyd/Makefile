@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ttyd
-PKG_VERSION:=1.6.3
+PKG_VERSION:=1.6.8
 PKG_RELEASE:=99
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
